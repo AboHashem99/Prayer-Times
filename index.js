@@ -210,7 +210,6 @@ function getNextPrayer(){
             return arr3;
         }
     }
-    city[0].innerText = "";
 }
 function timeConvert(n) {
     var num = n;
@@ -349,12 +348,12 @@ function useLocation(){
     navigator.geolocation.getCurrentPosition(userLocation, errorCallback);
 }
 
-function dropdownForMobiles(){
-    if (dropdownContent.style.display==="none") {
-        dropdownContent.style.display="block";
-    }
-    else dropdownContent.style.display="none"
-}
+// function dropdownForMobiles(){
+//     if (dropdownContent.style.display==="none") {
+//         dropdownContent.style.display="block";
+//     }
+//     else dropdownContent.style.display="none"
+// }
 
 //exact time
 setInitialTime();
