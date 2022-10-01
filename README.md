@@ -1,3 +1,4 @@
 # Prayer-Times
 Prayer Times in Saudi Arabia
-![Prayer Times - Google Chrome 2022-09-27 21-29-07](https://user-images.githubusercontent.com/112592058/193411467-87df6b04-4ba2-438e-acdd-b5234a741750.gif)
+PC Screen 
+https://user-images.githubusercontent.com/112592058/193411589-4d5095d0-655e-44a4-a5d7-34e19baa5c89.mp4
