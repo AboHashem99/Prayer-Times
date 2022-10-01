@@ -2,7 +2,7 @@
 Prayer Times in Saudi Arabia
 
 
-[Check Website](prayertimes.netlify.app)
+[Check Website](https://saprayertimes.netlify.app)
 
 
 PC Screen 
