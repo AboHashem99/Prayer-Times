@@ -31,7 +31,7 @@ function appearGear(){
     container2.style.display="none";
     flex_container.style.display="none";
     container3.style.display="inline-block";
-    container3.style.textAlign="center";
+    // container3.style.textAlign="center";
     // container4.style.display="none";
     footer.style.display="none";
 }
@@ -171,7 +171,7 @@ function monthInLetters(date){
     let month = Number(arr[1]);
     for (let i = 0; i < months.length; i++) {
         if (i+1 === month) {
-            return `${arr[0]} ${months[i]}`
+            return `${Number(arr[0])} ${months[i]}`
         }
     }
 }
@@ -255,7 +255,7 @@ function setPrayer(place,city,dayCount,month){
         prayerTimes.push(date.timings.Isha);
         correctTimings(prayerTimes);
         getNextPrayer(prayerTimes);
-        setInterval(getNextPrayer, 500);
+        setInterval(getNextPrayer, 1000);
         // console.log(prayerTimes)
         for (let i = 0; i < prayerTimes.length; i++) { 
             place[i].innerText = setTimeAmPm( prayerTimes[i] );
@@ -329,7 +329,7 @@ function setPrayerBasedLocation(place,dayCount,month,longitude,latitude){
         prayerTimes.push(date.timings.Isha);
         correctTimings(prayerTimes);
         getNextPrayer(prayerTimes);
-        setInterval(getNextPrayer, 500);
+        setInterval(getNextPrayer, 1000);
         for (let i = 0; i < prayerTimes.length; i++) { 
             place[i].innerText = setTimeAmPm( prayerTimes[i] );
         }
@@ -348,12 +348,12 @@ function useLocation(){
     navigator.geolocation.getCurrentPosition(userLocation, errorCallback);
 }
 
-// function dropdownForMobiles(){
-//     if (dropdownContent.style.display==="none") {
-//         dropdownContent.style.display="block";
-//     }
-//     else dropdownContent.style.display="none"
-// }
+function dropdownForMobiles(){
+    if (dropdownContent.style.display==="block") {
+        dropdownContent.style.display="none";
+    }
+    else dropdownContent.style.display="block"
+}
 
 //exact time
 setInitialTime();

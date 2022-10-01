@@ -17,10 +17,16 @@ body {
     background-image: linear-gradient(to right, #292929,#9B2335);
     color: #d3455a;
 }
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 nav{
     height: 6rem;
-    width: 100vw;
+    width: 100%;
     display: flex;
     z-index: 10;
     box-shadow: 0 1px 20px rgba(0,0,0,0.2);
@@ -49,6 +55,7 @@ nav{
     text-transform: uppercase;
     list-style: none;
     font-weight: 600;
+    font-size:1.5rem;
 }
 
 .nav-links li a{
@@ -57,19 +64,7 @@ nav{
     transition: all ease-in-out 350ms;
     padding: 10px;
     color: #d3455a;
-    font-size: 1rem;
-}
-
-.nav-links li a:hover{
-    color:#000;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 50px;
-}
-
-
-.nav-links li a:hover::before{
-    width: 80%;
+    font-size:1.5rem;
 }
 
 
@@ -110,7 +105,6 @@ nav{
 }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content h2:hover {background-color: #8e013c}
   
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -161,6 +155,7 @@ nav{
 }
 #date{
   justify-content: space-between;
+  align-items: center;
     width: 60%;
     margin: auto;
     margin-bottom: 0%;
@@ -190,6 +185,7 @@ nav{
       width: 100%;
       max-width: 725px;
       margin: 0px auto;
+      text-align: center;
   }
   .gears{
     width:48%;
@@ -203,27 +199,11 @@ nav{
   .gears-container{
       width:150px; 
       height: 150px;
-      font-size:24px;
+      /* font-size:24px; */
       padding: 9%;
       position: relative; 
       margin: 0px auto;
       font-size: 10rem;
-  }
-  .message{
-    text-align: left;
-    letter-spacing: .15em;
-    padding: 40px;
-    line-height: 1.5em;
-    font-size: .75em;
-    background: #F6F6F6; 
-    height: 100%;
-  }
-  .message h1{
-    margin-bottom: .25em; 
-    text-transform: uppercase; 
-    font-weight: bold;
-    font-size: 1rem;
-    border-bottom: 4px solid #DE1B1B; 
   }
   .gear-rotate{
       width: 2em;
@@ -404,4 +384,138 @@ nav{
     margin-top: 1rem;
     animation-name: example4;
   animation-duration: 1s;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-links li a:hover{
+    color:#000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+.nav-links li a:hover::before{
+  width: 80%;
+}
+.dropdown-content h2:hover {background-color: #8e013c}
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  * {
+    font-size: 15px;
+    animation-name: none;
+    /* white-space:nowrap;  */
+    /* overflow: hidden; */
+  }
+  li {
+    text-align: center;
+  }
+  .logo{
+    padding: 0;
+    flex-shrink: 2;
+  }
+  .logo img{
+    width: 4rem;
+  }
+  body{
+    animation-name: none;
+
+  }
+  #date{
+    width: 90%;
+    animation-name: none;
+    margin-top: 10%;
+  }
+  nav{
+    width: 100%;
+  }
+  .nav-links li a{
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+  }
+  .dropbtn{
+    font-size: 1.8rem;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links li{
+    font-size: 1.8rem;
+    width: 100%;
+    /* white-space:nowrap;  */
+
+  }
+  .grid-container {
+    width:80%;
+    grid-template-columns: auto auto;
+    /* background-color: rgb(151, 133, 198); */
+    padding: auto;
+    margin: auto;
+    row-gap: 1rem;
+    animation-name: none;
+    margin-top: 0%;
+  /* animation-duration: 1s; */
+  }
+  .flex-container{
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    justify-content: center;
+    column-gap: 0.5rem;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    animation-name: none;
+  }
+  .footer-item{
+    display: none;
+  }
+  #Timer{
+    margin-top: 10%;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  #nextPrayer{
+    font-size: 2.2rem;
+  }
+  #timeLeft{
+    font-size: 2.2rem;
+  }
+  #date span {
+    font-size: 35px;
+  }
+  .gears-container{
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #date span {
+    font-size: 15px;
+  }
+  #nextPrayer{
+    font-size: 1.3rem;
+  }
+  #timeLeft{
+    font-size: 1.3rem;
+  }
+
+  .logo img{
+    width: 2rem;
+  }
+  .nav-links li a{
+    font-size: 1rem;
+  }
+  .dropbtn{
+    font-size: 1rem;
+  }
+  .nav-links li{
+    font-size: 1rem;
+  }
+  .logo{
+    padding: 0;
+    flex-shrink: 2;
+  }
 }

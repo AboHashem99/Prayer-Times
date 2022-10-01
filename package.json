@@ -1,0 +1,23 @@
+{
+  "name": "prayer-times",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AboHashem99/Prayer-Times.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AboHashem99/Prayer-Times/issues"
+  },
+  "homepage": "https://github.com/AboHashem99/Prayer-Times#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

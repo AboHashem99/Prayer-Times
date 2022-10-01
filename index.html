@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="page.css">
     <link rel="icon" href="Images/Mosque.png">
     <title>Prayer Times</title>
@@ -13,9 +12,9 @@
     <!--  Header -->
     <nav>
         <ul class="nav-links">
-            <li style="grid-column-start: 1; grid-column-end: 2;">
+            <li>
                 <div class="dropdown" style="margin-left:1%; margin-top: 0.5%;">
-                    <h2 class="dropbtn" style="min-width: 130px;">Mecca</h2>
+                    <h2 class="dropbtn" style="min-width: 130px;" onclick="dropdownForMobiles()">Mecca</h2>
                     <div class="dropdown-content">
                         <h2 id="location" class="content" onclick="useLocation()">
                             <img id="loc" src="Images/location.png" alt="" height="30px" width="30px" style="padding: auto !important ; ">
@@ -35,11 +34,11 @@
                 </div>
             </li>
 
-            <li style=" font-size:1.5rem;grid-column-start: 2; grid-column-end: 3;">Saudi Arabia</li>
+            <li style>Saudi Arabia</li>
 
-            <li ><a href="#" style="font-size: 1.5rem;grid-column-start: 3; grid-column-end: 4; ">Arabic</a></li>
+            <li ><a href="#" >Arabic</a></li>
         
-             <li class="logo" style="grid-column-start: 4; grid-column-end: 5;">
+             <li class="logo" >
                 <img src="Images/Mosque.png" alt="Logo Image">
             </li>
         </ul>
@@ -56,7 +55,7 @@
     </div>
 
     <!--  Time left for next prayer-->
-    <div class="flex-container">
+    <div id="Timer" class="flex-container">
         <div id="nextPrayer"></div>
         <div id="timeLeft"></div>
     </div>
@@ -96,5 +95,6 @@
     </div>
 
 </body>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
 <script src="index.js"></script>
 </html>
